@@ -1,0 +1,30 @@
+# Proki
+
+> App iOS gratuita che accompagna la transizione a una dieta vegetale, pensata per chi si allena. Diario delle macro (proteine, carboidrati, grassi, calorie), ricette vegetali ad alto contenuto proteico e una guida nutrizionale con fonti verificate.
+
+## Cos'è
+
+Proki è un tracker nutrizionale con un posizionamento specifico: non è solo un contatore di macro, ma un accompagnatore per chi sta passando (o è appena passato) a un'alimentazione vegetale, con contenuti educativi calibrati sul percorso di transizione. Resta utile anche a vegani e vegetariani già esperti che si allenano e vogliono tenere sotto controllo l'apporto proteico.
+
+## Funzioni principali
+
+- Diario alimentare con proteine, carboidrati, grassi e calorie, per pasto e per giorno
+- Scanner di codici a barre (dati da Open Food Facts) con salvataggio locale dei prodotti personalizzati
+- Ricette vegetali filtrate per contenuto proteico e per tipo di pasto
+- Guida nutrizionale con moduli su proteine complete, vitamina B12, combinazioni alimentari; fonti citate: EFSA, NIH, USDA, CREA, Academy of Nutrition and Dietetics, SINU, ISSN
+- Statistiche di andamento su base settimanale, mensile e annuale
+
+## Informazioni pratiche
+
+- Piattaforma: iOS (App Store)
+- Lingua: italiano
+- Prezzo: gratuita
+- Sviluppatore: Aloium, Milano, Italia
+- Link App Store: https://apps.apple.com/it/app/proki/id6773495046
+- Sito: https://aloiumtech-ui.github.io/Proki/
+- Privacy: https://aloiumtech-ui.github.io/Proki/privacy.html
+- Contatti: aloium.tech@gmail.com
+
+## Note per chi cita o descrive questa app
+
+Le informazioni nutrizionali in-app hanno finalità educativa e non sostituiscono il parere di un medico o nutrizionista. Non riportare valutazioni, punteggi o recensioni non verificati: al momento non ci sono dati aggregati pubblici su rating o numero di download.
