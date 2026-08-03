@@ -3,162 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verdant — Proteine vegetali, risultati reali</title>
-<meta name="description" content="La guida che ti accompagna nella transizione al vegetale: sostituzioni, proteine, ricette e diario delle macro, tutto in un posto solo. Per non perdersi nelle prime settimane.">
-<meta property="og:title" content="Verdant — Cambiare dieta è dura. Da soli, di più.">
-<meta property="og:description" content="La guida che ti accompagna nella transizione al vegetale. Tutto in un posto solo, finché diventa naturale.">
+<title>Proki · Proteine vegetali, risultati reali</title>
+<meta name="description" content="L'app che ti accompagna nella transizione al vegetale: sostituzioni, proteine, ricette e diario delle macro, tutto in un posto solo. Scaricala gratis su App Store.">
+<meta property="og:title" content="Proki · Cambiare dieta è dura. Da soli, di più.">
+<meta property="og:description" content="La guida che ti accompagna nella transizione al vegetale. Tutto in un posto solo, finché diventa naturale. Disponibile ora su App Store.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --forest:#173404;--green:#3B6D11;--leaf:#639922;--lime:#97C459;
-    --lime-soft:#C0DD97;--amber:#EF9F27;--amber-deep:#D98410;--oat:#F1EFE8;--paper:#FAF9F4;
-    --ink:#16210d;--muted:#6f7a63;
-    --shadow-soft:0 1px 2px rgba(23,52,4,.04),0 8px 24px rgba(23,52,4,.06);
-    --shadow-lift:0 2px 4px rgba(23,52,4,.05),0 20px 50px rgba(23,52,4,.12);
-    --amber-grad:linear-gradient(135deg,#F2AC3E,#E89017);
+    --mint:#DCEFE4;--mint-deep:#C7E4D5;
+    --cream:#FDECCD;--cream-deep:#F9DDA8;
+    --ink:#156956;--ink-deep:#0E4A3D;
+    --orange:#F16E2A;--orange-deep:#D8571A;
+    --line:#9FC0AE;
+    --paper:#FFFCF6;
+    --text:#16302A;--text-soft:#4C6459;
+    --shadow-soft:0 1px 2px rgba(14,74,61,.05),0 8px 22px rgba(14,74,61,.07);
+    --shadow-lift:0 4px 10px rgba(14,74,61,.08),0 26px 54px rgba(14,74,61,.16);
+    --orange-grad:linear-gradient(135deg,#F58347,#E05E1E);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--paper);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
   a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  h1,h2,.disp{font-family:'Fredoka',sans-serif;font-weight:600}
 
-  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-  .rise{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+  .rise{opacity:0;animation:rise .75s cubic-bezier(.2,.7,.2,1) forwards}
   @media(prefers-reduced-motion:reduce){.rise{animation:none;opacity:1}}
-  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}.d5{animation-delay:.5s}
 
-  /* shared button system — amber reserved for primary CTA only */
-  .btn-amber{background:var(--amber-grad);color:#3d2702;font-weight:700;font-size:16px;padding:15px 30px;border-radius:14px;display:inline-block;box-shadow:0 1px 1px rgba(255,255,255,.4) inset,0 6px 18px rgba(217,132,16,.28);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
-  .btn-amber:hover{transform:translateY(-2px);box-shadow:0 1px 1px rgba(255,255,255,.4) inset,0 10px 26px rgba(217,132,16,.36)}
-  .btn-ghost{color:#fff;font-weight:600;font-size:15px;border:1px solid rgba(255,255,255,.22);padding:14px 26px;border-radius:14px;transition:background .25s,border-color .25s}
-  .btn-ghost:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.4)}
+  .btn-orange{background:var(--orange-grad);color:#fff;font-weight:700;font-size:16px;padding:15px 30px;border-radius:14px;display:inline-flex;align-items:center;gap:9px;box-shadow:0 1px 1px rgba(255,255,255,.25) inset,0 8px 20px rgba(216,87,26,.32);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+  .btn-orange:hover{transform:translateY(-2px);box-shadow:0 1px 1px rgba(255,255,255,.25) inset,0 12px 26px rgba(216,87,26,.4)}
+  .btn-ghost{color:var(--ink);font-weight:600;font-size:15px;border:1.5px solid rgba(21,105,86,.28);padding:13.5px 26px;border-radius:14px;transition:background .25s,border-color .25s}
+  .btn-ghost:hover{background:rgba(21,105,86,.06);border-color:rgba(21,105,86,.5)}
+  .btn-ghost-light{color:#fff;font-weight:600;font-size:15px;border:1.5px solid rgba(255,255,255,.35);padding:13.5px 26px;border-radius:14px;transition:background .25s,border-color .25s}
+  .btn-ghost-light:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
 
   /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:rgba(23,52,4,.82);backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid rgba(151,196,89,.14)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:15px;padding-bottom:15px}
-  nav .brand{display:flex;align-items:center;gap:11px;color:#fff;font-weight:800;font-size:21px;letter-spacing:-.01em}
-  nav .cta{color:var(--lime-soft);font-weight:600;font-size:14px;padding:9px 18px;border-radius:11px;border:1px solid rgba(151,196,89,.28);transition:background .25s,color .25s}
-  nav .cta:hover{background:rgba(151,196,89,.12);color:#fff}
+  nav{position:sticky;top:0;z-index:60;background:rgba(255,252,246,.86);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid rgba(21,105,86,.08)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:13px;padding-bottom:13px}
+  nav .brand img{height:26px;width:auto}
+  nav .cta{background:var(--orange-grad);color:#fff;font-weight:700;font-size:14px;padding:10px 20px;border-radius:11px;box-shadow:0 4px 14px rgba(216,87,26,.3);transition:transform .2s,box-shadow .2s}
+  nav .cta:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(216,87,26,.4)}
 
-  /* HERO */
-  .hero{background:
-      radial-gradient(820px 520px at 78% -8%,rgba(99,153,34,.22),transparent 60%),
-      radial-gradient(620px 480px at 8% 108%,rgba(239,159,39,.08),transparent 62%),
-      var(--forest);
-    color:var(--oat);position:relative;overflow:hidden;padding:92px 0 104px}
-  .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .5px,transparent .5px);background-size:34px 34px;opacity:.025;pointer-events:none}
-  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
-  .hero .tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--lime-soft);background:rgba(151,196,89,.12);border:1px solid rgba(151,196,89,.26);padding:7px 15px;border-radius:30px;margin-bottom:26px}
-  .hero .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(151,196,89,.22)}
-  .hero h1{font-size:56px;font-weight:800;line-height:1.04;letter-spacing:-.03em;color:#fff;margin-bottom:22px}
-  .hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--lime),var(--leaf));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hero p.lead{font-size:18.5px;color:var(--lime-soft);max-width:486px;margin-bottom:36px;line-height:1.6}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  /* DECORATIVE LINE ICONS — the app icon's own illustration vocabulary, reused as texture */
+  .deco{position:absolute;stroke:var(--line);fill:none;pointer-events:none}
 
-  /* PHONE in hero */
-  .hero-phone{justify-self:center;width:282px;background:linear-gradient(160deg,#16280a,#0b1a02);border-radius:42px;padding:13px;box-shadow:0 2px 6px rgba(0,0,0,.3),0 40px 90px rgba(0,0,0,.5);position:relative}
-  .hero-phone::before{content:"";position:absolute;top:0;left:0;right:0;height:50%;border-radius:42px 42px 0 0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);pointer-events:none}
-  .hp-notch{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:92px;height:26px;background:#000;border-radius:0 0 16px 16px;z-index:3}
-  .hp-screen{background:var(--paper);border-radius:30px;overflow:hidden;position:relative}
-  .hp-top{background:linear-gradient(165deg,var(--green),#2d550c);padding:34px 20px 26px;color:#fff}
-  .hp-date{font-size:12px;color:var(--lime-soft);font-weight:500}
-  .hp-ring{margin:16px auto 2px;width:134px;height:134px;position:relative}
-  .hp-ring .v{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-  .hp-ring .num{font-size:36px;font-weight:800;line-height:1;letter-spacing:-.02em}
-  .hp-ring .unit{font-size:11px;color:var(--lime-soft);margin-top:4px}
-  .hp-macros{display:flex;justify-content:space-around;padding:16px 8px 4px}
-  .hp-macros .m{text-align:center}
-  .hp-macros .mv{font-size:15px;font-weight:700;color:#fff}
-  .hp-macros .ml{font-size:10px;color:var(--lime-soft);margin-top:2px}
-  .hp-body{padding:16px 16px 22px}
-  .hp-meal{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(23,52,4,.06);border-radius:14px;padding:11px 13px;margin-bottom:9px;box-shadow:0 1px 3px rgba(23,52,4,.04)}
-  .hp-meal .ic{width:32px;height:32px;border-radius:9px;background:var(--oat);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .hp-meal .nm{font-size:12.5px;font-weight:600;color:var(--forest)}
-  .hp-meal .mt{font-size:10px;color:var(--muted)}
-  .hp-meal .pv{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--leaf)}
+  /* HERO — the diagonal mint/cream split lifted straight from the app icon */
+  .hero{position:relative;overflow:hidden;background:var(--cream);padding:56px 0 0}
+  .hero-split{position:absolute;inset:0;z-index:0}
+  .hero-split svg{width:100%;height:100%;display:block}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:20px;align-items:center;padding-top:36px;padding-bottom:64px}
+  .hero .tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--ink-deep);background:rgba(255,255,255,.6);border:1px solid rgba(21,105,86,.18);padding:7px 15px;border-radius:30px;margin-bottom:24px}
+  .hero .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(241,110,42,.2)}
+  .hero h1{font-size:52px;line-height:1.08;letter-spacing:-.01em;color:var(--ink-deep);margin-bottom:20px}
+  .hero h1 span{color:var(--orange)}
+  .hero p.lead{font-family:'Plus Jakarta Sans';font-size:18px;color:var(--text-soft);max-width:480px;margin-bottom:32px;line-height:1.62}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+  .hero-rating{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--text-soft);font-weight:500}
+  .hero-rating .stars{color:var(--orange);letter-spacing:1px;font-size:15px}
+
+  .hero-visual{position:relative;height:440px}
+  .hv-mark{position:absolute;top:8%;right:0;width:78%;filter:drop-shadow(0 18px 34px rgba(14,74,61,.16))}
+  .hv-card{position:absolute;left:0;bottom:6%;width:216px;background:#fff;border-radius:22px;padding:20px 20px 18px;box-shadow:var(--shadow-lift);transform:rotate(-5deg)}
+  .hv-card .lbl{font-size:11px;font-weight:600;color:var(--text-soft);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
+  .hv-ring{width:96px;height:96px;margin:0 auto 12px;position:relative}
+  .hv-ring .v{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .hv-ring .num{font-family:'Fredoka';font-size:22px;color:var(--ink-deep);line-height:1}
+  .hv-ring .unit{font-size:9px;color:var(--text-soft);margin-top:2px}
+  .hv-macros{display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid rgba(21,105,86,.08)}
+  .hv-macros .m{text-align:center}
+  .hv-macros .mv{font-size:13px;font-weight:700;color:var(--ink-deep)}
+  .hv-macros .ml{font-size:9.5px;color:var(--text-soft);margin-top:1px}
+  .hv-chip{position:absolute;right:6%;bottom:0;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:var(--shadow-soft);display:flex;align-items:center;gap:8px;transform:rotate(3deg)}
+  .hv-chip .ico{width:26px;height:26px;border-radius:8px;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .hv-chip .txt{font-size:12px;font-weight:600;color:var(--ink-deep)}
+  .hv-chip .txt small{display:block;font-size:9.5px;font-weight:500;color:var(--orange)}
+
+  /* CURVE DIVIDER — the signature motif, reused between every section */
+  .curve{display:block;width:100%;line-height:0}
+  .curve svg{width:100%;height:64px;display:block}
 
   /* SECTIONS */
-  section{padding:92px 0}
-  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);margin-bottom:15px;display:flex;align-items:center;gap:10px}
-  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--leaf);border-radius:2px}
-  h2{font-size:39px;font-weight:800;line-height:1.12;letter-spacing:-.025em;color:var(--forest);margin-bottom:18px}
-  .section-lead{font-size:18px;color:#3a4530;max-width:620px;margin-bottom:0;line-height:1.65}
+  section{padding:82px 0}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--orange-deep);border-radius:2px}
+  h2{font-size:36px;line-height:1.14;letter-spacing:-.005em;color:var(--ink-deep);margin-bottom:16px}
+  .section-lead{font-size:17.5px;color:var(--text-soft);max-width:600px;line-height:1.65}
 
-  /* TWO AUDIENCES */
-  .aud{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
-  .aud-card{border-radius:26px;padding:40px 36px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  .why{background:var(--paper)}
+  .aud{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
+  .aud-card{border-radius:24px;padding:36px 32px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
   .aud-card:hover{transform:translateY(-4px)}
-  .aud-card.veg{background:linear-gradient(165deg,#1d4006,var(--forest));color:var(--oat);box-shadow:var(--shadow-lift)}
-  .aud-card.gym{background:linear-gradient(165deg,var(--lime),#86b34a);color:var(--forest);box-shadow:var(--shadow-lift)}
-  .aud-card::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;top:-120px;right:-90px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%)}
-  .aud-card h3{font-size:24px;font-weight:800;margin-bottom:12px;letter-spacing:-.01em;position:relative}
-  .aud-card.veg h3{color:#fff}
-  .aud-card p{font-size:16px;line-height:1.62;position:relative}
-  .aud-card.veg p{color:var(--lime-soft)}
-  .aud-card.gym p{color:#244706}
-  .aud-card .ic{font-size:28px;margin-bottom:18px;display:block;position:relative}
+  .aud-card.veg{background:linear-gradient(160deg,var(--ink),var(--ink-deep));color:var(--mint);box-shadow:var(--shadow-lift)}
+  .aud-card.gym{background:linear-gradient(160deg,#F58347,var(--orange-deep));color:#fff;box-shadow:var(--shadow-lift)}
+  .aud-card h3{font-family:'Fredoka';font-weight:600;font-size:22px;margin-bottom:10px;color:#fff}
+  .aud-card p{font-size:15.5px;line-height:1.6;position:relative}
+  .aud-card.veg p{color:#CFE6DA}
+  .aud-card.gym p{color:#FDE3D2}
+  .aud-card .ic{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 
-  /* FEATURES */
-  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
-  .feat{background:#fff;border:1px solid rgba(23,52,4,.07);border-radius:20px;padding:32px 28px;transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s,border-color .28s;box-shadow:var(--shadow-soft)}
-  .feat:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:rgba(99,153,34,.3)}
-  .feat .fic{width:48px;height:48px;border-radius:14px;background:linear-gradient(160deg,var(--oat),#e7e4d8);display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
-  .feat h4{font-size:18px;font-weight:700;color:var(--forest);margin-bottom:9px;letter-spacing:-.01em}
-  .feat p{font-size:15px;color:#3a4530;line-height:1.58}
+  .feat{background:var(--mint)}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+  .feat-card{background:#fff;border-radius:20px;padding:30px 26px;box-shadow:var(--shadow-soft);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+  .feat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+  .feat-card svg{stroke:var(--ink);margin-bottom:16px}
+  .feat-card h4{font-family:'Fredoka';font-weight:600;font-size:17.5px;color:var(--ink-deep);margin-bottom:7px}
+  .feat-card p{font-size:14.5px;color:var(--text-soft);line-height:1.55}
 
-  /* STATS band */
-  .band{background:linear-gradient(135deg,var(--green),#2c540c);color:#fff;position:relative;overflow:hidden}
-  .band::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .5px,transparent .5px);background-size:30px 30px;opacity:.04}
-  .band .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:30px;text-align:center;position:relative}
-  .band .stat .big{font-size:48px;font-weight:800;color:var(--lime);line-height:1;letter-spacing:-.02em}
-  .band .stat .lab{font-size:15px;color:var(--lime-soft);margin-top:10px;max-width:230px}
+  .band{background:linear-gradient(135deg,var(--ink),var(--ink-deep));color:#fff}
+  .band .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:28px;text-align:center}
+  .band .stat .big{font-family:'Fredoka';font-size:44px;font-weight:600;color:var(--orange);line-height:1}
+  .band .stat .lab{font-size:14.5px;color:var(--mint);margin-top:8px;max-width:220px}
 
-  /* HOW — numbered because it's a real sequence */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;counter-reset:s}
-  .step{position:relative;padding:34px 28px 30px;background:#fff;border:1px solid rgba(23,52,4,.07);border-radius:20px;box-shadow:var(--shadow-soft)}
-  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:28px;width:40px;height:40px;background:var(--forest);color:var(--lime);font-weight:800;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:17px;box-shadow:0 8px 18px rgba(23,52,4,.22)}
-  .step h4{font-size:18px;font-weight:700;color:var(--forest);margin:16px 0 8px;letter-spacing:-.01em}
-  .step p{font-size:15px;color:#3a4530;line-height:1.58}
+  .how{background:var(--paper)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px;counter-reset:s}
+  .step{position:relative;padding:32px 26px 28px;background:var(--mint);border-radius:20px}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:26px;width:38px;height:38px;background:var(--orange-grad);color:#fff;font-family:'Fredoka';font-weight:600;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 8px 16px rgba(216,87,26,.3)}
+  .step h4{font-family:'Fredoka';font-weight:600;font-size:17.5px;color:var(--ink-deep);margin:14px 0 7px}
+  .step p{font-size:14.5px;color:var(--text-soft);line-height:1.55}
 
-  /* WAITLIST */
-  .wl{background:
-      radial-gradient(680px 420px at 50% -20%,rgba(99,153,34,.22),transparent 60%),
-      var(--forest);
-    color:var(--oat);text-align:center;position:relative;overflow:hidden}
-  .wl::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .5px,transparent .5px);background-size:34px 34px;opacity:.025}
-  .wl .wrap{position:relative;z-index:1}
-  .wl h2{color:#fff}
-  .wl p{font-size:18px;color:var(--lime-soft);max-width:520px;margin:0 auto 34px}
-  .wl-form{display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-  .wl-form input{flex:1;min-width:240px;padding:16px 20px;border-radius:14px;border:1px solid rgba(151,196,89,.28);background:rgba(255,255,255,.06);color:#fff;font-size:16px;font-family:inherit;transition:border-color .25s,background .25s}
-  .wl-form input::placeholder{color:rgba(193,221,151,.55)}
-  .wl-form input:focus{outline:none;border-color:var(--lime);background:rgba(255,255,255,.1)}
-  .wl-note{font-size:13px;color:rgba(193,221,151,.65);margin-top:18px}
-  .wl-ok{display:none;font-size:18px;font-weight:600;color:var(--lime);margin-top:24px}
+  /* DOWNLOAD — bookends the page with the same split motif as the hero */
+  .dl{position:relative;overflow:hidden;background:var(--mint)}
+  .dl-split{position:absolute;inset:0;z-index:0}
+  .dl-split svg{width:100%;height:100%;display:block}
+  .dl .wrap{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;padding:78px 28px}
+  .dl-icon{width:92px;border-radius:22px;box-shadow:var(--shadow-lift);margin-bottom:26px}
+  .dl h2{color:var(--ink-deep)}
+  .dl p{font-size:17.5px;color:var(--text-soft);max-width:500px;margin:0 auto 32px}
+  .dl-note{font-size:13px;color:var(--text-soft);margin-top:20px;opacity:.85}
 
-  /* FOOTER */
-  footer{background:#0c1c02;color:var(--lime-soft);padding:44px 0;font-size:14px}
+  footer{background:var(--ink-deep);color:var(--mint);padding:40px 0;font-size:14px}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
-  footer .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:18px}
+  footer .brand img{height:24px;width:auto}
   footer .links{display:flex;gap:22px;flex-wrap:wrap}
-  footer .links a{color:var(--lime-soft);transition:color .2s}
-  footer .links a:hover{color:#fff}
-  footer .copy{color:rgba(193,221,151,.6);font-size:13px;width:100%;border-top:1px solid rgba(151,196,89,.12);padding-top:18px;margin-top:4px}
+  footer .links a{color:var(--mint);opacity:.85;transition:opacity .2s}
+  footer .links a:hover{opacity:1}
+  footer .copy{color:var(--mint);opacity:.55;font-size:12.5px;width:100%;border-top:1px solid rgba(220,239,228,.14);padding-top:16px;margin-top:2px}
 
-  :focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:6px}
+  :focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px}
 
-  @media(max-width:860px){
-    .hero{padding:72px 0 80px}
-    .hero .wrap{grid-template-columns:1fr;gap:46px}
-    .hero h1{font-size:40px}
-    .hero-phone{order:-1}
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:44px;padding-bottom:56px}
+    .hero h1{font-size:38px}
+    .hero-visual{height:340px;order:-1}
     .aud,.feat-grid,.steps{grid-template-columns:1fr}
-    section{padding:68px 0}
-    h2{font-size:30px}
+    section{padding:60px 0}
+    h2{font-size:28px}
     nav .brand span.full{display:none}
   }
 </style>
@@ -167,63 +163,90 @@
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="brand">
-      <svg width="34" height="34" viewBox="0 0 140 140"><rect width="140" height="140" rx="34" fill="#97C459"/><path d="M34 40 L70 112 L106 40 L86 40 L70 78 L54 40 Z" fill="#173404"/><path d="M86 40 C96 44, 102 36, 100 26 C90 26, 84 32, 86 40 Z" fill="#3B6D11"/></svg>
-      <span class="full">verdant</span>
-    </a>
-    <a href="#waitlist" class="cta">Unisciti alla lista</a>
+    <a href="#top" class="brand"><img src="assets/proki-wordmark.png" alt="Proki"></a>
+    <a href="https://apps.apple.com/it/app/proki/id6773495046" class="cta" target="_blank" rel="noopener">Scarica ora</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
+  <div class="hero-split" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+      <rect width="1440" height="900" fill="#DCEFE4"/>
+      <path d="M1440,0 L1440,900 C1050,860 900,620 980,420 C1060,220 900,90 780,0 Z" fill="#FDECCD"/>
+    </svg>
+    <svg class="deco" style="top:6%;left:4%;width:150px;height:150px" viewBox="0 0 100 100" stroke-width="2.4" opacity=".55">
+      <path d="M50 30c-14-6-24 2-24 14 0 8 6 14 14 14h20c8 0 14-6 14-14 0-12-10-20-24-14z"/>
+      <path d="M50 58v22"/>
+      <path d="M50 40c-6-4-13-2-14 4"/>
+      <path d="M50 40c6-4 13-2 14 4"/>
+    </svg>
+    <svg class="deco" style="top:30%;left:22%;width:46px;height:46px" viewBox="0 0 100 100" stroke-width="4" opacity=".5">
+      <path d="M20 55c10-32 45-40 62-38-4 22-22 46-62 38z"/>
+      <path d="M25 52c14-4 30-14 40-30"/>
+    </svg>
+    <circle class="deco" cx="88%" cy="10%" r="7" stroke-width="2.4" opacity=".4"/>
+    <circle class="deco" cx="6%" cy="46%" r="4.5" stroke-width="2.4" opacity=".4"/>
+    <svg class="deco" style="bottom:6%;right:5%;width:170px;height:110px" viewBox="0 0 160 100" stroke-width="2.4" opacity=".4">
+      <path d="M20 40c0-4 3-6 7-4 6-16 24-16 30-2 8-4 16 2 14 10"/>
+      <path d="M15 44h130l-10 34c-2 8-9 12-17 12H42c-8 0-15-4-17-12z"/>
+    </svg>
+  </div>
+
   <div class="wrap">
     <div>
-      <span class="tag rise d1">In arrivo su iOS</span>
-      <h1 class="rise d2">Cambiare dieta è dura.<br><em>Da soli, di più.</em></h1>
-      <p class="lead rise d3">Le prime settimane da vegano sono un labirinto: cosa sostituire, dove prendere le proteine, come cucinare ingredienti che non hai mai usato. Le informazioni sono sparse ovunque — Verdant le mette in un posto solo e ti accompagna, finché il nuovo modo di mangiare diventa semplicemente il tuo.</p>
+      <span class="tag rise d1">Già disponibile su App Store</span>
+      <h1 class="rise d2">Cambiare dieta<br>è dura. <span>Da soli,<br>di più.</span></h1>
+      <p class="lead rise d3">Le prime settimane da vegano sono un labirinto: cosa sostituire, dove prendere le proteine, come cucinare ingredienti che non hai mai usato. Le informazioni sono sparse ovunque: Proki le mette in un posto solo e ti accompagna, finché il nuovo modo di mangiare diventa semplicemente il tuo.</p>
       <div class="hero-cta rise d4">
-        <a href="#waitlist" class="btn-amber">Provala per primo</a>
+        <a href="https://apps.apple.com/it/app/proki/id6773495046" class="btn-orange" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.02-2.13 1.75-3.15 1.83-3.2-1-1.46-2.55-1.66-3.1-1.68-1.32-.13-2.58.78-3.25.78-.67 0-1.7-.76-2.8-.74-1.44.02-2.77.84-3.51 2.13-1.5 2.6-.38 6.45 1.08 8.56.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.49-.7 2.79-.7 1.3 0 1.67.7 2.81.68 1.16-.02 1.89-1.05 2.6-2.09.82-1.19 1.15-2.35 1.17-2.41-.03-.01-2.24-.86-2.31-3.47zM14.98 5.6c.6-.72 1-1.72.89-2.72-.86.04-1.9.58-2.52 1.3-.55.63-1.04 1.65-.91 2.62.95.07 1.93-.48 2.54-1.2z"/></svg>
+          Scarica su App Store
+        </a>
         <a href="#come-funziona" class="btn-ghost">Come funziona</a>
       </div>
+      <div class="hero-rating rise d5">
+        <span class="stars">★★★★★</span>
+        <span>Gratis, in italiano, nessuna carta richiesta</span>
+      </div>
     </div>
-    <div class="hero-phone rise d5">
-      <div class="hp-notch"></div>
-      <div class="hp-screen">
-        <div class="hp-top">
-          <div class="hp-date">Mercoledì 28 maggio</div>
-          <div class="hp-ring">
-            <svg width="134" height="134" viewBox="0 0 134 134">
-              <circle cx="67" cy="67" r="55" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="11"/>
-              <circle cx="67" cy="67" r="55" fill="none" stroke="#C0DD97" stroke-width="11" stroke-linecap="round" stroke-dasharray="345" stroke-dashoffset="82" transform="rotate(-90 67 67)"/>
-            </svg>
-            <div class="v"><div class="num">103</div><div class="unit">/ 132g proteine</div></div>
-          </div>
-          <div class="hp-macros">
-            <div class="m"><div class="mv">180g</div><div class="ml">carbo</div></div>
-            <div class="m"><div class="mv">52g</div><div class="ml">grassi</div></div>
-            <div class="m"><div class="mv">1840</div><div class="ml">kcal</div></div>
-          </div>
+
+    <div class="hero-visual rise d5">
+      <img class="hv-mark" src="assets/proki-wordmark.png" alt="">
+      <div class="hv-card">
+        <div class="lbl">Oggi</div>
+        <div class="hv-ring">
+          <svg width="96" height="96" viewBox="0 0 96 96">
+            <circle cx="48" cy="48" r="40" fill="none" stroke="#F1EAD8" stroke-width="9"/>
+            <circle cx="48" cy="48" r="40" fill="none" stroke="#F16E2A" stroke-width="9" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="60" transform="rotate(-90 48 48)"/>
+          </svg>
+          <div class="v"><div class="num">103</div><div class="unit">/132g prot.</div></div>
         </div>
-        <div class="hp-body">
-          <div class="hp-meal"><div class="ic"><svg width="15" height="15" viewBox="0 0 140 140"><path d="M34 40 L70 112 L106 40 L86 40 L70 78 L54 40 Z" fill="#639922"/></svg></div><div><div class="nm">Tofu strapazzato</div><div class="mt">Colazione</div></div><div class="pv">22g</div></div>
-          <div class="hp-meal"><div class="ic"><svg width="15" height="15" viewBox="0 0 140 140"><path d="M34 40 L70 112 L106 40 L86 40 L70 78 L54 40 Z" fill="#639922"/></svg></div><div><div class="nm">Lenticchie &amp; quinoa</div><div class="mt">Pranzo</div></div><div class="pv">31g</div></div>
-          <div class="hp-meal"><div class="ic"><svg width="15" height="15" viewBox="0 0 140 140"><path d="M34 40 L70 112 L106 40 L86 40 L70 78 L54 40 Z" fill="#639922"/></svg></div><div><div class="nm">Shake proteico</div><div class="mt">Post-workout</div></div><div class="pv">28g</div></div>
+        <div class="hv-macros">
+          <div class="m"><div class="mv">180g</div><div class="ml">carbo</div></div>
+          <div class="m"><div class="mv">52g</div><div class="ml">grassi</div></div>
+          <div class="m"><div class="mv">1840</div><div class="ml">kcal</div></div>
         </div>
+      </div>
+      <div class="hv-chip">
+        <div class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#156956" stroke-width="2.6"><path d="M5 13l4 4L19 7"/></svg></div>
+        <div class="txt">Lenticchie &amp; quinoa<small>31g proteine</small></div>
       </div>
     </div>
   </div>
 </header>
 
-<section>
+<div class="curve" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,0 C420,64 1020,0 1440,40 L1440,64 L0,64 Z" fill="#FFFCF6"/></svg></div>
+
+<section class="why">
   <div class="wrap">
     <div class="eyebrow">Perché esiste</div>
     <h2>È nata da chi c'è passato.</h2>
-    <p class="section-lead">Verdant non l'ha pensata un'azienda. L'ha costruita qualcuno che è diventato vegano e si è perso nelle prime settimane: nessun manuale chiaro, informazioni ovunque, e la sensazione che mollare fosse più facile che continuare. Questa è l'app che sarebbe servita allora.</p>
+    <p class="section-lead">Proki non l'ha pensata un'azienda. L'ha costruita qualcuno che è diventato vegano e si è perso nelle prime settimane: nessun manuale chiaro, informazioni ovunque, e la sensazione che mollare fosse più facile che continuare. Questa è l'app che sarebbe servita allora.</p>
     <div class="aud">
       <div class="aud-card veg">
         <span class="ic">🧭</span>
         <h3>Hai appena iniziato</h3>
-        <p>Sei tu il motivo per cui Verdant esiste. Una guida che ti prende per mano: cosa sostituire, come arrivare alle proteine, come usare gli ingredienti nuovi. Un passo alla volta, finché diventa naturale.</p>
+        <p>Sei tu il motivo per cui Proki esiste. Una guida che ti prende per mano: cosa sostituire, come arrivare alle proteine, come usare gli ingredienti nuovi. Un passo alla volta, finché diventa naturale.</p>
       </div>
       <div class="aud-card gym">
         <span class="ic">💪</span>
@@ -234,49 +257,48 @@
   </div>
 </section>
 
-<section style="background:#fff" id="come-funziona">
+<div class="curve" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,0 C420,50 1000,64 1440,10 L1440,64 L0,64 Z" fill="#DCEFE4"/></svg></div>
+
+<section class="feat" id="come-funziona">
   <div class="wrap">
     <div class="eyebrow">Cosa fa</div>
     <h2>Tutto quello che serve, niente di superfluo.</h2>
     <div class="feat-grid">
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M3 5h12a3 3 0 013 3v11a2.5 2.5 0 00-2.5-2.5H3zM21 5H9"/></svg></div>
+      <div class="feat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 5h12a3 3 0 013 3v11a2.5 2.5 0 00-2.5-2.5H3zM21 5H9"/></svg>
         <h4>La guida che non avevi</h4>
         <p>Il manuale chiaro che manca quando inizi: sostituzioni, proteine, ferro, B12, come usare ogni ingrediente. Calibrato sul punto in cui sei, un passo alla volta.</p>
       </div>
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <div class="feat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
         <h4>Diario delle macro</h4>
         <p>Proteine, carboidrati, grassi e calorie. Imposta i tuoi obiettivi, registra un pasto in pochi tap, vedi i progressi in tempo reale.</p>
       </div>
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+      <div class="feat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
         <h4>Ricette ad alte proteine</h4>
         <p>Decine di ricette vegetali filtrate per contenuto proteico. Macro calcolate, pronte da aggiungere al diario con un tocco.</p>
       </div>
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5"/></svg></div>
+      <div class="feat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5"/></svg>
         <h4>Obiettivo su misura</h4>
-        <p>Inserisci il tuo peso e Verdant calcola il fabbisogno proteico da atleta, in grammi per chilo. Niente numeri a caso.</p>
+        <p>Inserisci il tuo peso e Proki calcola il fabbisogno proteico da atleta, in grammi per chilo. Niente numeri a caso.</p>
       </div>
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+      <div class="feat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
         <h4>Dizionario ingredienti</h4>
         <p>Le migliori fonti proteiche vegetali, come usarle, cosa sostituiscono. Una guida pratica sempre in tasca.</p>
       </div>
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
-        <h4>Ingredienti personali</h4>
-        <p>Manca qualcosa? Crea il tuo ingrediente con le sue macro. Resta privato, sempre disponibile per i tuoi log.</p>
-      </div>
-      <div class="feat">
-        <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <div class="feat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
         <h4>Sostituzioni intelligenti</h4>
         <p>Mangiavi questo? Ecco l'alternativa vegetale con le stesse proteine. Smetti di cercare su dieci siti diversi: la risposta è già qui.</p>
       </div>
     </div>
   </div>
 </section>
+
+<div class="curve" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,20 C420,70 1000,0 1440,30 L1440,64 L0,64 Z" fill="#156956"/></svg></div>
 
 <section class="band">
   <div class="wrap">
@@ -286,7 +308,9 @@
   </div>
 </section>
 
-<section>
+<div class="curve" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,10 C420,0 1000,60 1440,20 L1440,64 L0,64 Z" fill="#FFFCF6"/></svg></div>
+
+<section class="how">
   <div class="wrap">
     <div class="eyebrow">Come funziona</div>
     <h2>Dal peso al piatto in tre passi.</h2>
@@ -307,52 +331,49 @@
   </div>
 </section>
 
-<section class="wl" id="waitlist">
+<div class="curve" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,30 C420,0 1000,60 1440,10 L1440,64 L0,64 Z" fill="#DCEFE4"/></svg></div>
+
+<section class="dl" id="scarica">
+  <div class="dl-split" aria-hidden="true">
+    <svg viewBox="0 0 1440 620" preserveAspectRatio="none">
+      <rect width="1440" height="620" fill="#DCEFE4"/>
+      <path d="M0,620 L0,0 C420,60 560,300 480,480 C400,660 180,600 0,620 Z" fill="#FDECCD"/>
+    </svg>
+    <svg class="deco" style="top:10%;right:8%;width:150px;height:100px" viewBox="0 0 160 100" stroke-width="2.4" opacity=".4">
+      <path d="M20 40c0-4 3-6 7-4 6-16 24-16 30-2 8-4 16 2 14 10"/>
+      <path d="M15 44h130l-10 34c-2 8-9 12-17 12H42c-8 0-15-4-17-12z"/>
+    </svg>
+    <svg class="deco" style="bottom:8%;left:6%;width:120px;height:120px" viewBox="0 0 100 100" stroke-width="2.4" opacity=".45">
+      <path d="M50 20a30 30 0 0 1 30 30" stroke-linecap="round"/>
+      <path d="M20 50a30 30 0 0 1 60 0" />
+      <path d="M50 50l14-16" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="3" fill="#9FC0AE" stroke="none"/>
+    </svg>
+  </div>
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--lime);justify-content:center">Lancio in arrivo</div>
-    <h2>Sii tra i primi a provare Verdant.</h2>
-    <p>Lascia la tua mail: ti avvisiamo appena l'app è disponibile su TestFlight. Niente spam, solo l'invito al lancio.</p>
-    <div class="wl-form">
-      <input type="email" id="email" placeholder="La tua email" aria-label="La tua email">
-      <button class="btn-amber" onclick="joinWaitlist()">Avvisami</button>
-    </div>
-    <div class="wl-note">Rispettiamo la tua privacy. Useremo la mail solo per l'invito al lancio.</div>
-    <div class="wl-ok" id="wlok">Sei in lista. Ti scriviamo presto. 🌱</div>
+    <img class="dl-icon" src="assets/proki-icon.png" alt="Icona app Proki">
+    <div class="eyebrow" style="justify-content:center">Disponibile ora</div>
+    <h2>Scarica Proki su App Store.</h2>
+    <p>L'app è già live in Italia. Diario delle macro, ricette ad alto contenuto proteico e la guida alla transizione: tutto pronto, gratis, a un tap di distanza.</p>
+    <a href="https://apps.apple.com/it/app/proki/id6773495046" class="btn-orange" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.02-2.13 1.75-3.15 1.83-3.2-1-1.46-2.55-1.66-3.1-1.68-1.32-.13-2.58.78-3.25.78-.67 0-1.7-.76-2.8-.74-1.44.02-2.77.84-3.51 2.13-1.5 2.6-.38 6.45 1.08 8.56.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.49-.7 2.79-.7 1.3 0 1.67.7 2.81.68 1.16-.02 1.89-1.05 2.6-2.09.82-1.19 1.15-2.35 1.17-2.41-.03-.01-2.24-.86-2.31-3.47zM14.98 5.6c.6-.72 1-1.72.89-2.72-.86.04-1.9.58-2.52 1.3-.55.63-1.04 1.65-.91 2.62.95.07 1.93-.48 2.54-1.2z"/></svg>
+      Scarica su App Store
+    </a>
+    <div class="dl-note">Disponibile per iPhone, in italiano. Versione EN e iPad in arrivo.</div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="brand">
-      <svg width="28" height="28" viewBox="0 0 140 140"><rect width="140" height="140" rx="30" fill="#97C459"/><path d="M34 40 L70 112 L106 40 L86 40 L70 78 L54 40 Z" fill="#173404"/><path d="M86 40 C96 44, 102 36, 100 26 C90 26, 84 32, 86 40 Z" fill="#3B6D11"/></svg>
-      verdant
-    </div>
+    <a href="#top" class="brand"><img src="assets/proki-wordmark-light.png" alt="Proki"></a>
     <div class="links">
       <a href="privacy.html">Privacy Policy</a>
       <a href="termini.html">Termini e Condizioni</a>
       <a href="mailto:aloium.tech@gmail.com">Contatti</a>
     </div>
-    <div class="copy">© 2026 Verdant · Aloium · Proteine vegetali, risultati reali</div>
+    <div class="copy">© 2026 Proki · Aloium · Proteine vegetali, risultati reali</div>
   </div>
 </footer>
 
-<script>
-  function joinWaitlist(){
-    var email = document.getElementById('email').value.trim();
-    var ok = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
-    if(!ok){
-      var input = document.getElementById('email');
-      input.style.borderColor = '#EF9F27';
-      input.focus();
-      return;
-    }
-    document.querySelector('.wl-form').style.display = 'none';
-    document.querySelector('.wl-note').style.display = 'none';
-    document.getElementById('wlok').style.display = 'block';
-  }
-  document.getElementById('email').addEventListener('keydown', function(e){
-    if(e.key === 'Enter') joinWaitlist();
-  });
-</script>
 </body>
 </html>
